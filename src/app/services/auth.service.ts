@@ -40,6 +40,7 @@ export class AuthService {
   }
 
   signInWithGoogle() {
+    console.log('google login');
     return this._firebaseAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
     );

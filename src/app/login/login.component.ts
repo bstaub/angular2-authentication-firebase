@@ -26,6 +26,16 @@ export class LoginComponent implements OnInit {
 
   }
 
+  signInWithGoogle() {
+        this.authService.signInWithGoogle()
+            .then((res) => {
+
+                this.router.navigate(['dashboard']);
+            })
+            .catch((err) => console.log('error: ' + err));
+
+  }
+
   ngOnInit() {
   }
 
