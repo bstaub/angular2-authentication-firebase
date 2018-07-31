@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutes } from './app.routes';
 
 import { AuthService } from './services/auth.service';
+import {AuthGuard} from './services/auth-guard.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { AuthService } from './services/auth.service';
     AngularFireAuthModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
